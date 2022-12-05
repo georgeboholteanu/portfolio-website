@@ -5,29 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>George // Web Developer</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
+  <header>    
+    <nav id="navBar">
+      <h1>George Boholteanu</h1>
+      <div id="menu">
+        <a href="#about">ABOUT ME</a>
+        <a href="#work">WORK</a>
+        <a href="#contact">CONTACT ME</a>
+        <!-- <a href="#resume">RESUME</a> -->
+      </div>
     </nav>
   </header>
 
   <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
-  </section>
+
 
   <main class="page-wrapper">
     <!-- about me -->
     <section class="page-section" id="about">
-      <h2>About Me</h2>
+      <h2>About Me</h2>      
+    </section>
+    <section id="about-content">
+      <div>
+        <img src="./images/me.jpg" alt="george boholteanu" height="280px">
+      </div>
+      <div id="description">
+        <h2>// Web developer //</h2>
+        <pre id="story">
+          Hi! I am George and I live in London!          
+          
+          After a decade of experience working as an 
+          architect and 3d visualizer, I became pasionate 
+          about computer programming.
+  
+          Looking for a fresh start as a Web developer.          
+        </pre>
+      </div>
     </section>
 
     <!-- portfolio container -->
@@ -35,10 +54,44 @@
       <h2>Work</h2>
     </section>
 
+    <section id="nested-workGrid"> 
+      <div class="workGridArea" id="cgi1" >
+        <div class="heading">CGI</div>
+      </div>
+      <div class="workGridArea" id="cgi2">
+        <div class="heading">CGI</div>
+      </div>
+      <div class="workGridArea" id="cgi3">
+        <div class="heading">CGI</div>
+      </div>
+      <div class="workGridArea" id="cgi4">
+        <div class="heading">CGI</div>
+      </div>
+      <div class="workGridArea" id="cgi5">
+        <div class="heading">CGI</div>
+      </div>
+      <div class="workGridArea" id="dev1">
+        <div class="heading">Dev</div>
+      </div>
+      <div class="workGridArea" id="dev2">
+        <div class="heading">Dev</div>
+      </div>
+
+    </section>
+
     <!-- contact -->
-    <section class="page-section contact" id="contact">
+    <section class="page-section" id="contact">
       <h2>Contact Me</h2>
     </section>
+    
+    <div id="mail">
+      <p>Want to say hi : 
+        <a href="mailto:george.boholteanu@gmail.com">
+        george.boholteanu@gmail.com
+        </p>
+      </p>
+    </div>
+
   </main>
 </body>
 
