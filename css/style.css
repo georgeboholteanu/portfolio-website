@@ -36,60 +36,62 @@ p {
 #navBar h1 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
-  color: rgb(60, 35, 60);
-  width: 350px;
-  text-align: center;
-  padding-left: 100px;;
-
+  color: rgb(43, 36, 81);
+  text-align: center;  
+  padding-left: 40px;
 }
 #navBar a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 14px;
-  padding: 8px;
-  color: grey;
+  padding-left: 8px;
+  color: white;
 }
-
-
 #navBar a:hover {
   color:cornflowerblue
 }
+#menu {
+  align-items:flex-end;
+  padding-right: 100px;
+}
 
 
- /* Grid CSS */
+ /* Main Grid */
  .page-wrapper {
   display: grid;
-  grid-template-rows: 300px 600px 100px;
+  grid-template-rows: 300px 700px 100px;
   grid-template-columns: 15% 85%;
   grid-template-areas:
     "about about-content"
     "work nested-workGrid"
-    "contact mail"
- 
+    "contact mail" 
     ; 
  }
- #about {  
-  grid-area: about;
- }
- /* #description {
-  grid-area: description;
+ .page-section {
+  border-right: 3px solid rgb(233, 200, 37);
   margin: 10px 10px;
+  text-align: right;
+  padding-inline-end: 10px;
+  text-align: right;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  justify-content: center;
-  text-align: left;
- } */
- #about-content {
+  align-items: center;
+  min-width: 100px;
+  color: grey;
+} 
+.page-section h2 {
+  font-size: 18px;
+}
+
+ /* ABOUT */
+#about {  
+  grid-area: about;
+}
+#about-content {
   grid-area: about-content;
   display: flex;
   justify-content: space-between;
   height: 300px;
   margin: 10px 10px;
   padding-right: 30px;
-  /* background-image: url("../images/02-hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* justify-content: flex-end; */
 }
 #about-content h2 {
   background-color:antiquewhite;
@@ -99,22 +101,78 @@ p {
   text-align: center;
   padding-left: 10px;
 }
-
 #description {
   padding-top: 50px;
 }
-
 #story {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 12px;
   color: grey;
 }
 
- #work {  
-  grid-area: work;
- }
+ /* WORK */
+#work {  
+grid-area: work;
+}
+ 
+#nested-workGrid {
+  display: grid;
+  margin: 10px 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-areas: 
+    "cgi1 cgi1 cgi1"
+    "cgi2 cgi3 cgi4"
+    "cgi5 dev1 dev2";
+}  
+#cgi1 {
+  grid-area: cgi1;
+  background-image: url("../images/cgi001_sml.jpg");
+  background-position: bottom;
 
+}
+#cgi2 {
+  grid-area: cgi2;
+  background-image: url("../images/cgi002_sml.jpg");  
+}
+#cgi3 {
+  grid-area: cgi3;
+  background-image: url("../images/cgi003_sml.jpg");
+}
+#cgi4 {
+  grid-area: cgi4;
+  background-image: url("../images/cgi004_sml.jpg");
+}
+#cgi5 {
+  grid-area: cgi5;
+  background-image: url("../images/cgi005_sml.jpg");
+}
+#dev1 {
+  grid-area: dev1;
+  background-image: url("../images/SAM_original.jpg");
+}
+#dev2 {
+  grid-area: dev2;
+  background-image: url("../images/data-visualization.jpg");
+}
+.workGridArea {
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+.workGridArea:hover {
+  opacity: 0.7;
+}  
+.heading {
+  color: white;
+  text-align: center;
+  align-items: end;
+}
 
+  /* CONTACT */
  #contact {  
   grid-area: contact;
  }
@@ -137,112 +195,44 @@ p {
   color:cornflowerblue
 }
 
- .page-section {
-  border-right: 3px solid #FF6200;
-  margin: 10px 10px;
-  text-align: right;
-  padding-inline-end: 10px;
-  text-align: right;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  align-items: center;
-  min-width: 100px;
-  color: grey;
- }
 
-#nested-workGrid {
-  display: grid;
-  margin: 10px 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-areas: 
-    "cgi1 cgi1 cgi1"
-    "cgi2 cgi3 cgi4"
-    "cgi5 dev1 dev2";
-}
+/* MEDIA QUERIES */
+@media only screen and (max-width: 769px) {
 
-#cgi1 {
-  grid-area: cgi1;
-  background-image: url("../images/cgi001_sml.jpg");
-  background-position: bottom;
-  background-position: 0em -10em;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#cgi2 {
-  grid-area: cgi2;
-  background-image: url("../images/cgi002_sml.jpg");
-}
-#cgi3 {
-  grid-area: cgi3;
-  background-image: url("../images/cgi003_sml.jpg");
-}
-#cgi4 {
-  grid-area: cgi4;
-  background-image: url("../images/cgi004_sml.jpg");
-}
-#cgi5 {
-  grid-area: cgi5;
-  background-image: url("../images/cgi005_sml.jpg");
-}
-#dev1 {
-  grid-area: dev1;
-  background-image: url("../images/SAM_original.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-#dev2 {
-  grid-area: dev2;
-  background-image: url("../images/SAM_original.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.workGridArea {
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: grid;
-  align-content: end;
-}
-.workGridArea:hover {
-  opacity: 0.7;
-}
-
-.heading {
-  color: white;
-  text-align: center;
-  align-items: end;
- 
-}
-.page-section h2 {
-  font-size: 18px;
-}
-
-
-@media only screen and (max-width: 600px) {
-  #header{
+  #navBar{
     display: flex;
     flex-direction: column;
   }
-  /* #about {
-    display: flex;
-    flex-direction: column;
+  #navBar h1 {
+    padding-left: 0;
   }
-  #work {
-    display: flex;
-    flex-direction: column;
+  #menu{
+    font-size: 12px;
+    padding-right: 0;
+    align-items: center;
   }
-  #contact {
-    display: flex;
-    flex-direction: column;
-  }
-  #nested-workingGrid {
+  .page-wrapper {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-areas: 
-      "cgi"
-      "sketch"
-      "dev"
-      ;
-  } */
+    grid-template-rows: 50px 300px 50px 600px 50px 150px;
+    grid-template-areas:
+      "about"
+      "about-content"
+      "work"
+      "nested-workGrid"
+      "contact"
+      "mail"
+    ;
+  }
+  #about, #work, #contact{
+    text-align: left; 
+
+  }
+  .page-section {
+    border-bottom: 3px solid rgb(233, 200, 37);
+    border-right: none;
+    align-items: center;
+    justify-items: center;
+    
+  }
 }
