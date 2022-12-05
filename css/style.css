@@ -50,12 +50,11 @@ p {
   color:cornflowerblue
 }
 #menu {
-  align-items:flex-end;
   padding-right: 100px;
 }
 
 
- /* Main Grid */
+ /* Define the main layout of the page and style of the grid */
  .page-wrapper {
   display: grid;
   grid-template-rows: 300px 700px 100px;
@@ -81,36 +80,34 @@ p {
   font-size: 18px;
 }
 
- /* ABOUT */
+ /* ABOUT section */
 #about {  
   grid-area: about;
 }
 #about-content {
   grid-area: about-content;
-  display: flex;
-  justify-content: space-between;
-  height: 300px;
-  margin: 10px 10px;
-  padding-right: 30px;
+  display: flex;  
+  margin: 10px 20px;
 }
 #about-content h2 {
   background-color:antiquewhite;
   font-size: large;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 5px 20px;
   text-align: center;
-  padding-left: 10px;
+
 }
-#description {
+#job-description {
   padding-top: 50px;
 }
 #story {
+  margin: 20px 20px; 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 12px;
   color: grey;
+
 }
 
- /* WORK */
+ /* WORK section*/
 #work {  
 grid-area: work;
 }
@@ -156,6 +153,7 @@ grid-area: work;
   background-image: url("../images/data-visualization.jpg");
 }
 .workGridArea {
+  margin: 2px;
   background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
@@ -165,6 +163,7 @@ grid-area: work;
 }
 .workGridArea:hover {
   opacity: 0.7;
+ 
 }  
 .heading {
   color: white;
@@ -172,7 +171,7 @@ grid-area: work;
   align-items: end;
 }
 
-  /* CONTACT */
+  /* CONTACT section*/
  #contact {  
   grid-area: contact;
  }
@@ -204,17 +203,18 @@ grid-area: work;
     flex-direction: column;
   }
   #navBar h1 {
+    font-size: medium;
     padding-left: 0;
   }
   #menu{
-    font-size: 12px;
+    font-size: 11px;
     padding-right: 0;
     align-items: center;
   }
-  .page-wrapper {
+  .page-wrapper {   
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 300px 50px 600px 50px 150px;
+    grid-template-rows: 50px 300px 50px 2000px 50px 150px;
     grid-template-areas:
       "about"
       "about-content"
@@ -226,7 +226,6 @@ grid-area: work;
   }
   #about, #work, #contact{
     text-align: left; 
-
   }
   .page-section {
     border-bottom: 3px solid rgb(233, 200, 37);
@@ -235,4 +234,49 @@ grid-area: work;
     justify-items: center;
     
   }
+
+  #about-content {
+    padding-right: 0px;  
+  }
+  #about-content h2 {
+    margin: 0px 5px;
+  }
+  #about-content img {
+    width: 50%;
+    height: 50%;
+  }
+  #job-description {    
+    padding-left: 0px;
+    padding-top: 0px;
+    padding: 0px 0px;
+    ;
+    
+  }
+  #story {
+    font-size: 11px;  
+  }
+  
+  #nested-workGrid{
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "cgi1"
+      "cgi2"
+      "cgi3"
+      "cgi4"
+      "cgi5"
+      "dev1"
+      "dev2"
+      ;
+  }
+  .workGridArea {
+    margin: 2px;
+  }
 }
+
+/* @media only screen and (max-width: 979px) {
+
+
+} */
+
