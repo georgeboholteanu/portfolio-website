@@ -242,8 +242,7 @@ grid-area: work;
     margin: 0px 5px;
   }
   #about-content img {
-    width: 50%;
-    height: 50%;
+    height: 130px;
   }
   #job-description {    
     padding-left: 0px;
