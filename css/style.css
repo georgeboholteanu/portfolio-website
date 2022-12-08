@@ -198,6 +198,9 @@ p {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 769px) {
+  body {
+    margin: 0;
+  }
   #navBar {
     display: flex;
     flex-direction: column;
@@ -214,7 +217,7 @@ p {
   .page-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 300px 50px 2000px 50px 150px;
+    grid-template-rows: 50px 200px 50px 2000px 50px 150px;
     grid-template-areas:
       "about"
       "about-content"
