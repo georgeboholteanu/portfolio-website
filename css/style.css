@@ -56,7 +56,7 @@ p {
   padding-right: 100px;
 }
 
-/* Define the main layout of the page and style of the grid */
+/* Define the main layout of the body and style of the grid */
 .page-wrapper {
   display: grid;
   grid-template-rows: 300px 700px 100px;
@@ -217,7 +217,7 @@ p {
   .page-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 200px 50px 2000px 50px 150px;
+    grid-template-rows: 50px 150px 50px 2000px 50px 150px;
     grid-template-areas:
       "about"
       "about-content"
