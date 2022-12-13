@@ -16,7 +16,7 @@ The following image shows the web application's appearance and functionality:
 #### ** Computer Preview **
 ![portfolio-mochup-computer](./images/portfolio-mochup.png)
 
-#### ** Phone Preview **
+#### ** mobile Preview **
 ![portfolio-mochup-phone](./images/portfolio-mochup_(iPhone%20SE).png)
 
 &nbsp;
@@ -32,7 +32,7 @@ https://github.com/georgeboholteanu/portfolio-website
 &nbsp;
 &nbsp;
 ### Contact
-For any suggestions or ideas ping me at [@George Boholteanu](george.boholteanu@gmail.com)
+For any suggestions or ideas ping me at [George Boholteanu](mailto:george.boholteanu@gmail.com)
 
 ---
 © 2022 George Boholteanu. All Rights Reserved.
